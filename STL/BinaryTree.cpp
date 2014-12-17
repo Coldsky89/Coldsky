@@ -26,6 +26,17 @@ void destroy_tree(node* leaf);
 node* root;
 };
 
+btree::btree()
+{
+root = NULL;
+}
+
+btree::~btree()
+{
+destroy_tree();
+}
+
+
 void btree::insert(int key, node* leaf)
 {
 if (key < leaf->Key_Value)
